@@ -59,7 +59,7 @@ class RegisterController extends Controller
         if ($validator->fails()) {
             return response($validator->errors(), 422);
         }
-        $this->create($request->all());
-        return $request->all();
+
+        return $this->create($request->all());
     }
 }
